@@ -44,19 +44,20 @@ The logistic regression model demonstrated a strong predictive capability with a
 
 In determining the optimal threshold for predicting employee churn, it's vital to assess the cost implications associated with Type I and Type II Errors.
 
-### False Negatives (Type II Error - Predicted No Churn, Actual Churn):
+**False Negatives (Type II Error - Predicted No Churn, Actual Churn):**
 
-**Cost Implication:** Employees who are predicted as not likely to churn but end up leaving the organization can result in substantial costs. This includes the expenses associated with recruitment, onboarding, and training a replacement. Additionally, there might be indirect costs related to productivity loss and disruption within the team.
+   - **Cost Implication:** Employees who are predicted as not likely to churn but end up leaving the organization can result in substantial costs. This includes the expenses associated with recruitment, onboarding, and training a replacement. Additionally, there might be indirect costs related to productivity loss and disruption within the team.
 
-### False Positives (Type I Error - Predicted Churn, Actual No Churn):
+**False Positives (Type I Error - Predicted Churn, Actual No Churn):**
 
-**Cost Implication:** While false positives may lead to unnecessary retention efforts and interventions, the direct financial impact is typically lower compared to the costs associated with replacing an employee. The costs of retention strategies, such as engagement programs, are generally outweighed by the expenses of recruitment and onboarding.
+   - **Cost Implication:** While false positives may lead to unnecessary retention efforts and interventions, the direct financial impact is typically lower compared to the costs associated with replacing an employee. The costs of retention strategies, such as engagement programs, are generally outweighed by the expenses of recruitment and onboarding.
 
-Considering the cost factors:
+### Considering the cost factors:
 
-- If precision is more crucial (minimizing false positives), choose threshold = 0.5.
-- If recall is more crucial (minimizing false negatives), choose threshold = 0.3.
-- For a balance between precision and recall, threshold = 0.4 could be a reasonable choice.
+- If **precision** is more crucial (minimizing false positives), choose threshold = 0.5.
+- If **recall** is more crucial (minimizing false negatives), choose threshold = 0.3.
+- For a **balance** between precision and recall, threshold = 0.4 could be a reasonable choice.
+
 
 ## Coefficient Analysis
 

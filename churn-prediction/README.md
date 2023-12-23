@@ -58,6 +58,7 @@ In determining the optimal threshold for predicting employee churn, it's vital t
 - If **recall** is more crucial (minimizing false negatives), choose threshold = 0.3.
 - For a **balance** between precision and recall, threshold = 0.4 could be a reasonable choice.
 
+<img src="https://github.com/j1mmyjang/portfolio/blob/fba08488f4ce63c0131e145c54d37f214617df86/churn-prediction/visualizations/confusionmatrix.png" width=40% height=40%>
 
 ## Coefficient Analysis
 

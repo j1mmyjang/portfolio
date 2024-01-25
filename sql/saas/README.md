@@ -31,7 +31,7 @@ This analysis delves into SaaS data, extracting insights on user behavior such a
 | num_logins | Number of times user logged in on the given login_date|
 
 ## Analysis
-### Login Activity
+### 1. Login Activity
 **Question:** How many times has each customer logged in?
 ```sql
 SELECT customer_id, COUNT(lh.login_id) AS num_login_days, SUM(lh.num_logins) num_total_logins
@@ -52,7 +52,7 @@ ORDER BY num_login_days DESC
 
 **Answer:** This query provides insights into the login activity of each customer. By examining the frequency of logins, we can distinguish between active and inactive customers. Analyzing these behavioral differences can offer valuable insights into customer engagement and usage patterns.
 
-### Inactive Customers
+### 2. Inactive Customers
 **Question:** Are there any customers that have never logged in? If so, what percentage of total customers is this?
 ```sql
 SELECT customer_id, SUM(num_logins) AS sum_logins
@@ -91,7 +91,7 @@ ORDER BY num_inactive_id DESC
 | 72556f3a5403426ae3b23ffd9ed1e0e28fc2885a | 4               |
 | 0c2a86df9149bdf8f6bb27572f0d4264efe35c0a | 4               |
 
-### Inactive Customer Information
+### 3. Customer Information
 ```sql
 WITH NeverLoggedInCustomers AS (
     SELECT customer_id

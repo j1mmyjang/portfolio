@@ -12,8 +12,6 @@ This analysis delves into SaaS data, extracting insights on user behavior such a
 | segment             | Small Business (SMB), Agency, or Corporate. NULL if unknown.|
 | industry            | Industry the customer belongs to. NULL if unknown. |
 | customer_demo_given | Date the customer received a demo of the product. NULL if the customer did not receive a demo.|
-| facebook_profiles   | Number of Facebook accounts/pages the customer has connected|
-| twitter_profiles    | Number of Twitter accounts the customer has connected|
 
 ### Customer Logins Table
 
@@ -107,14 +105,14 @@ LEFT JOIN customer c ON c.customer_id = nlic.customer_id;
 ```
 
 **Output (13 Rows):**
-| customer_id                           | age | churned | base_plan | segment     | industry      | customer_demo_given | twitter_profiles | facebook_profiles |
-|---------------------------------------|-----|---------|-----------|-------------|---------------|---------------------|-------------------|-------------------|
-| 05d90656118773c37b03673a0aeb4bab45c463be | 29  | 0.0     | Premium   | SMB         | null          | null                 | 1.0               | 1.0               |
-| 263b738c7a6a3bc96fb7bcd1f28e76472aaab911 | 4   | 0.0     | Team      | Corporate   | Manufacturing | null                | 1.0               | 0.0               |
-| 46aeb5445b3be4fc1362797dfeb2c13ed7bed37c | 27  | 0.0     | Team      | Enterprise  | Recreational  | null                | 11.0              | 13.0              |
-| 68d87b0eab589023bdaffb8844da4673100ea4fc | 30  | 0.0     | Team      | SMB         | null          | null                | 1.0               | 0.0               |
-| 6da86a8ba6893be0e935cc9314f520cbb96cf582 | 19  | 0.0     | Premium   | SMB         | null          | null                | 1.0               | 0.0               |
-| 6f1eaf6341a401874b62869117159485f474166b | 0   | 1.0     | Premium   | SMB         | null          | null                | 1.0               | 1.0               |
+| customer_id                           | age | churned | base_plan | segment     | industry      | customer_demo_given |
+|---------------------------------------|-----|---------|-----------|-------------|---------------|---------------------|
+| 05d90656118773c37b03673a0aeb4bab45c463be | 29  | 0.0     | Premium   | SMB         | null          | null                 | 
+| 263b738c7a6a3bc96fb7bcd1f28e76472aaab911 | 4   | 0.0     | Team      | Corporate   | Manufacturing | null                |
+| 46aeb5445b3be4fc1362797dfeb2c13ed7bed37c | 27  | 0.0     | Team      | Enterprise  | Recreational  | null                | 
+| 68d87b0eab589023bdaffb8844da4673100ea4fc | 30  | 0.0     | Team      | SMB         | null          | null                | 
+| 6da86a8ba6893be0e935cc9314f520cbb96cf582 | 19  | 0.0     | Premium   | SMB         | null          | null                | 
+| 6f1eaf6341a401874b62869117159485f474166b | 0   | 1.0     | Premium   | SMB         | null          | null                | 
 
 **Insight:** Upon closer examination, it appears that the majority of customers who have never logged in have not churned and are still subscribed. This suggests an opportunity to encourage these customers to log in more frequently. However, a consistent observation is that none of these customers received a product demo. This could indicate a lack of familiarity with the service or being in the early stages of adopting the software. Addressing this area may present an opportunity for optimization, such as providing additional guidance or resources to enhance the customer onboarding experience.
 

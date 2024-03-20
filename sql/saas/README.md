@@ -1,4 +1,4 @@
-# Exploratory SQL Analysis of SaaS Data
+# Exploratory SQL Analysis of SaaS Customers
 This analysis delves into SaaS data, extracting insights on user behavior such as engagement, login patterns, and plan-specific activities. These findings can inform strategic decisions for optimizing SaaS services.
 
 ### Customer Table
